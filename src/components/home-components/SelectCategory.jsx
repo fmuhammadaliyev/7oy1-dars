@@ -1,19 +1,33 @@
-
 const SelectCategory = () => {
   return (
     <section className="category ">
-        <div className="mycon flex flex-col gap-2 sm:gap-4 md:gap-6 xl:gap-8">
-          <h5 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl ">Select a vehicle group</h5>
+      <div className="mycon flex flex-col gap-2 sm:gap-4 md:gap-6 xl:gap-8">
+        <h5 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl ">
+          Select a vehicle group
+        </h5>
 
-          <div  className="w-[80%] m-auto flex items-center justify-center gap-5">
-            {
-                Array.from({length:6}).map((_ , idx) =>  <button key={idx} className="bg-[#5937e0] p-3 rounded-3xl text-white" >All vehicles</button>)
-            }
-           
-          </div>
+        <div className="w-[80%] m-auto flex items-center justify-center gap-5">
+          {Array.from({ length: 6 }).map((_, idx) => (
+            <button
+              key={idx}
+              className="
+        bg-[#c0c0c0]
+        text-black 
+        p-3 
+        rounded-3xl 
+        hover:bg-[#5937e0] 
+        hover:text-white 
+        transition 
+        duration-300
+      "
+            >
+              All vehicles
+            </button>
+          ))}
         </div>
-      </section>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default SelectCategory
+export default SelectCategory;
