@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Header from "../components/header/Header";
-import SelectCategory from "../components/home-components/SelectCategory";
+import SelectCategory from "../componets/home-components/SelectCategory";
 import useAxios from "../hooks/useAxios";
 import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../redux/cars-data-slice";
@@ -24,10 +24,16 @@ const Home = () => {
       <Header />
       <SelectCategory />
 
-      <section className="all-cars">
-        <div className="mycon">
-          {data &&
-            data?.data.map((car) => <div key={car.id}> {car.name} </div>)}
+      <section className="all-cars   pt-6">
+        <div className="mycon grid grid-cols-3 gap-6">
+          {data?.data.map((car) => (
+            <div
+              key={car.id}
+              className="bg-white p-5 rounded-2xl shadow-md border hover:shadow-xl transition"
+            >
+              <h2 className="text-xl font-semibold">{car.name}</h2>
+            </div>
+          ))}
         </div>
       </section>
     </>
