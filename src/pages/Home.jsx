@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Header from "../components/header/Header";
-import SelectCategory from "../componets/home-components/SelectCategory";
+import SelectCategory from "../components/home-components/SelectCategory";
 import useAxios from "../hooks/useAxios";
 import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../redux/cars-data-slice";
